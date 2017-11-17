@@ -33,3 +33,5 @@ $events = [
 foreach ($events as $event) {
     (new $event($app))->run();
 }
+
+$app['logger']->info('nicebot complete :)');
