@@ -27,8 +27,6 @@ class FollowUser
 
         $user = json_decode($response);
 
-        var_dump($user);
-
         $this->logger->info("Following {$user->name} @{$user->screen_name}");
     }
 
