@@ -1,0 +1,21 @@
+{
+    "name": "jjgrainger/nicebot",
+    "authors": [
+        {
+            "name": "Joe Grainger",
+            "email": "josephgrainger@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {
+        "vlucas/phpdotenv": "^2.4",
+        "guzzlehttp/guzzle": "^6.3",
+        "guzzlehttp/oauth-subscriber": "^0.3.0",
+        "monolog/monolog": "^1.23",
+        "pimple/pimple": "^3.2"
+    }
+}
