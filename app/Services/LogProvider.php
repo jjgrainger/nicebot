@@ -13,7 +13,7 @@ class LogProvider implements ServiceProviderInterface
     {
         // create logger
         $log = new Logger('nicebot');
-        $log->pushHandler(new StreamHandler('php://stderr', Logger::WARNING));
+        $log->pushHandler(new StreamHandler('php://stderr', Logger::DEBUG));
 
         $container['logger'] = $log;
     }
