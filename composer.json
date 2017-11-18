@@ -16,6 +16,8 @@
         "guzzlehttp/guzzle": "^6.3",
         "guzzlehttp/oauth-subscriber": "^0.3.0",
         "monolog/monolog": "^1.23",
-        "pimple/pimple": "^3.2"
+        "pimple/pimple": "^3.2",
+        "dragonmantank/cron-expression": "^2.0",
+        "nesbot/carbon": "^1.22"
     }
 }
