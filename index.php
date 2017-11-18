@@ -24,14 +24,14 @@ foreach ($services as $service) {
     $app->register(new $service);
 }
 
-// events to run
-$events = [
-    App\Events\FollowUser::class
+// jobs to run
+$jobs = [
+    App\Jobs\FollowUser::class
 ];
 
 // cycle through each event and run them
-foreach ($events as $event) {
-    (new $event($app))->run();
+foreach ($jobs as $job) {
+    (new $job($app))->handle();
 }
 
 $app['logger']->info('nicebot complete :)');

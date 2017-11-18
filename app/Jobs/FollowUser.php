@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace App\Jobs;
 
 use Pimple\Container;
 
@@ -14,7 +14,7 @@ class FollowUser
         $this->logger = $app['logger'];
     }
 
-    public function run()
+    public function handle()
     {
         // get a random user id from the competitors list
         $member_id = $this->getListMembers();
