@@ -6,7 +6,7 @@ use App\Scheduler\Job;
 
 class ThrowBackThursday extends Job
 {
-    function __construct($container)
+    public function __construct($container)
     {
         // get the ohthatsnice.net api
         $this->api = $container['ohthatsnice'];
