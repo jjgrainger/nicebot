@@ -2,16 +2,17 @@
 
 namespace App\Jobs;
 
-use Pimple\Container;
+use Slim\Container;
+use App\Scheduler\Job;
 
-class FollowUser
+class FollowUser extends Job
 {
     public $twitter;
 
-    public function __construct(Container $app)
+    public function __construct(Container $c)
     {
-        $this->twitter = $app['twitter'];
-        $this->logger = $app['logger'];
+        $this->twitter = $c['twitter'];
+        $this->logger = $c['logger'];
     }
 
     public function handle()

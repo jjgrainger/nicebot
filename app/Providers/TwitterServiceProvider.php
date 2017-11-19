@@ -1,14 +1,15 @@
 <?php
 
-namespace App\Services;
+namespace App\Providers;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
+
 use GuzzleHttp\Client;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Subscriber\Oauth\Oauth1;
 
-class TwitterProvider implements ServiceProviderInterface
+class TwitterServiceProvider implements ServiceProviderInterface
 {
     public function register(Container $container)
     {
