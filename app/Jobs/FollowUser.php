@@ -17,6 +17,8 @@ class FollowUser extends Job
 
     public function handle()
     {
+        $this->log->info("Start job FollowUser");
+
         // get a random user id from the competitors list
         $member_id = $this->getListMembers();
 

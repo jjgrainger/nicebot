@@ -17,7 +17,8 @@ class NewWebsite extends Job
 
     public function handle()
     {
-        var_dump($this->expression);
+        $this->log->info("Start job NewWebsite");
+
         $post = $this->getLatestPost();
 
         // parse the post date for comparison
@@ -30,6 +31,8 @@ class NewWebsite extends Job
 
             $this->log->info("New post tweeted, id: {$response->id}");
         }
+
+        $this->log->info("End job NewWebsite");
     }
 
     public function getLatestPost()

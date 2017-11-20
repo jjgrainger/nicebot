@@ -16,6 +16,8 @@ class ThrowBackThursday extends Job
 
     public function handle()
     {
+        $this->log->info("Start job ThrowBackThursday");
+
         $post = $this->getRandomPost();
 
         $message = $this->getMessage();
