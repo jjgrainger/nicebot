@@ -12,7 +12,7 @@ class FollowUser extends Job
     public function __construct(Container $c)
     {
         $this->twitter = $c['twitter'];
-        $this->logger = $c['logger'];
+        $this->log = $c['logger'];
     }
 
     public function handle()
@@ -30,7 +30,7 @@ class FollowUser extends Job
 
         $user = json_decode($response);
 
-        $this->logger->info("Following {$user->name} @{$user->screen_name}");
+        $this->log->info("Following {$user->name} @{$user->screen_name}");
     }
 
     public function getListMembers()

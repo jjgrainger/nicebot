@@ -19,5 +19,3 @@ $schedule->add(new App\Jobs\NewWebsite($container))->dailyAt(12, 0);
 $schedule->add(new App\Jobs\ThrowBackThursday($container))->at(15, 0)->thursdays();
 
 $schedule->run();
-
-
