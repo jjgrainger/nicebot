@@ -1,1 +1,1 @@
-worker: php scheduler.php
+scheduler: php scheduler.php

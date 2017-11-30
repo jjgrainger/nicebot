@@ -37,8 +37,7 @@ class ThrowBackThursday extends Job
     public function getMessage()
     {
         $messages = [
-            "Throwback to one of our favourites sites in the Gallery - {{title}} #tbt #ThrowbackThursday via @OhThatsNice_ {{link}}",
-            "Throwback to this nice design - {{title}} #tbt #ThrowbackThursday via @OhThatsNice_ {{link}}",
+            "Throwback to one of our favourites sites in the Gallery - {{title}} #tbt #ThrowbackThursday {{link}}",
         ];
 
         // return a random message

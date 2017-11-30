@@ -5,17 +5,28 @@ require __DIR__ . '/app/bootstrap.php';
 use App\Scheduler\Kernal;
 use Carbon\Carbon;
 
-$container = $app->getContainer();
+while(true) {
 
-$schedule = new Kernal;
+    $container = $app->getContainer();
 
-// set current time for testing
-// $schedule->setDate(Carbon::parse('2017/11/15 12:00:34'));
+    $schedule = new Kernal;
 
-$schedule->add(new App\Jobs\FollowUser($container))->everyMinute();
+    // set current time for testing
+    // $schedule->setDate(Carbon::parse('2017/11/15 12:00:34'));
 
-$schedule->add(new App\Jobs\NewWebsite($container))->dailyAt(12, 0);
+    // Ping for testing
+    $schedule->add(new App\Jobs\Ping($container))->everyMinute();
 
-$schedule->add(new App\Jobs\ThrowBackThursday($container))->at(15, 0)->thursdays();
+    // Follow a user based on twitter list
+    $schedule->add(new App\Jobs\FollowUser($container))->twiceDaily(9, 15);
 
-$schedule->run();
+    // tweet the new website for the day
+    $schedule->add(new App\Jobs\NewWebsite($container))->dailyAt(12, 0);
+
+    // tweet throwback thursday
+    $schedule->add(new App\Jobs\ThrowBackThursday($container))->at(15, 0)->thursdays();
+
+    $schedule->run();
+
+    sleep(60);
+}

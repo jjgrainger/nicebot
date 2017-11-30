@@ -48,7 +48,7 @@ class NewWebsite extends Job
     public function tweet($post)
     {
         // create tweet text
-        $tweet = "New site in the gallery - {$post->title} #webdesign #inspiration via @OhThatsNice_ {$post->url}";
+        $tweet = "New site in the gallery - {$post->title} {$post->url}";
         // post to twitter
         $response = $this->twitter->request('POST', 'statuses/update.json', [
             'query' => [
