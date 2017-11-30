@@ -15,10 +15,10 @@ while(true) {
     // $schedule->setDate(Carbon::parse('2017/11/15 12:00:34'));
 
     // Ping for testing
-    $schedule->add(new App\Jobs\Ping($container))->everyMinute();
+    // $schedule->add(new App\Jobs\Ping($container))->everyMinute();
 
     // Follow a user based on twitter list
-    $schedule->add(new App\Jobs\FollowUser($container))->twiceDaily(9, 15);
+    $schedule->add(new App\Jobs\FollowUser($container))->hourly();
 
     // tweet the new website for the day
     $schedule->add(new App\Jobs\NewWebsite($container))->dailyAt(12, 0);
