@@ -21,10 +21,13 @@ while(true) {
     $schedule->add(new App\Jobs\FollowUser($container))->hourly();
 
     // tweet the new website for the day
-    $schedule->add(new App\Jobs\NewWebsite($container))->dailyAt(12, 0);
+    $schedule->add(new App\Jobs\NewWebsite($container))->dailyAt(12);
 
     // tweet throwback thursday
-    $schedule->add(new App\Jobs\ThrowBackThursday($container))->at(15, 0)->thursdays();
+    $schedule->add(new App\Jobs\ThrowBackThursday($container))->at(15)->thursdays();
+
+    // tweet link to site advertising inspiration
+    $schedule->add(new App\Jobs\LinkToSite($container))->at(12)->tuesdays();
 
     $schedule->run();
 
