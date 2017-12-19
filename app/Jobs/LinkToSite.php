@@ -35,7 +35,7 @@ class LinkToSite extends Job
             "There's a lovely collection of sites growing over here, come take a look",
             "Looking for some inspiration? Come take a look...",
             "Take a look at some of the nice websites featured in the gallery",
-            "after some web design inspiration? Check otu some of the latest sites in the gallery"
+            "After some web design inspiration? Check out some of the latest sites in the gallery"
         ];
 
         return $tweets[array_rand($tweets)];
