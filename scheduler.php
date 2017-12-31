@@ -18,7 +18,7 @@ while(true) {
     // $schedule->add(new App\Jobs\Ping($container))->everyMinute();
 
     // Follow a user based on twitter list
-    $schedule->add(new App\Jobs\FollowUser($container))->hourly();
+    $schedule->add(new App\Jobs\FollowUser($container))->dailyAt(12, 30);
 
     // tweet the new website for the day
     $schedule->add(new App\Jobs\NewWebsite($container))->dailyAt(12);
