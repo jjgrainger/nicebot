@@ -29,6 +29,9 @@ while(true) {
     // tweet link to site advertising inspiration
     $schedule->add(new App\Jobs\LinkToSite($container))->at(12)->tuesdays();
 
+    // trigger a travis build nightly
+    $schedule->add(new App\Jobs\TriggerBuild($container))->dailyAt(1);
+
     $schedule->run();
 
     sleep(60);

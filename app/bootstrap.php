@@ -18,6 +18,7 @@ $services = [
     App\Providers\LogServiceProvider::class,
     App\Providers\TwitterServiceProvider::class,
     App\Providers\OhThatsNiceServiceProvider::class,
+    App\Providers\TravisServiceProvider::class,
 ];
 
 foreach ($services as $service) {
