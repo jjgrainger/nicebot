@@ -17,8 +17,6 @@ while(true) {
     // Ping for testing
     // $schedule->add(new App\Jobs\Ping($container))->everyMinute();
 
-    $schedule->add(new App\Jobs\SubmitASite($container))->everyMinute();
-
     // Follow a user based on twitter list
     $schedule->add(new App\Jobs\FollowUser($container))->dailyAt(12, 30);
 
