@@ -17,6 +17,8 @@ while(true) {
     // Ping for testing
     // $schedule->add(new App\Jobs\Ping($container))->everyMinute();
 
+    $schedule->add(new App\Jobs\SubmitASite($container))->everyMinute();
+
     // Follow a user based on twitter list
     $schedule->add(new App\Jobs\FollowUser($container))->dailyAt(12, 30);
 
@@ -31,6 +33,10 @@ while(true) {
 
     // trigger a travis build nightly
     $schedule->add(new App\Jobs\TriggerBuild($container))->dailyAt(1);
+
+    // tweet call for submissions
+    $schedule->add(new App\Jobs\SubmitASite($container))->at(15)->tuesdays();
+    $schedule->add(new App\Jobs\SubmitASite($container))->at(12)->thursdays();
 
     $schedule->run();
 
