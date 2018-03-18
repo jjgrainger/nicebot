@@ -37,7 +37,7 @@ class SubmitASite extends Job
             "Launched a new website recently? Why not have it featured on @OhThatsNice_ {{link}}",
             "We love a personal portfolio website, why not add yours? #webdesign #webdev {{link}}",
             "We're always looking out for beautiful websites, submit a site today! #webdesign #inspiration {{link}}",
-            "We're always hungry for lovely looking websites! Help feed our appetite by sumbitting a site today {{link}}",
+            "We're always hungry for lovely looking websites! Help feed our appetite by submitting a site today {{link}}",
             "We've got a lovely growing collection of websites in the gallery, why not add yours? {{link}}",
         ];
 
