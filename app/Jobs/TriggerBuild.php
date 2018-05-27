@@ -8,7 +8,7 @@ class TriggerBuild extends Job
 {
     function __construct($container)
     {
-        $this->travis = $container['travisci'];
+        $this->netlify = $container['netlify'];
         $this->log = $container['logger'];
     }
 
@@ -16,20 +16,14 @@ class TriggerBuild extends Job
     {
         $response = $this->triggerBuild();
 
-        $data = json_decode($response->getBody());
-
-        $this->log->info("Build triggered: #{$data->request->id}");
+        $this->log->info("Netlify build triggered");
     }
 
     /**
-     * Trigger a build on Travis CI
+     * Trigger a build on Netlify
      */
     public function triggerBuild()
     {
-        return $this->travis->request('POST', 'repo/jjgrainger%2Fohthatsnice/requests', [
-            'request' => [
-                'branch' => 'master'
-            ]
-        ]);
+        return $this->netlify->request('POST', '/build_hooks/' . getenv('NETLIFY_BUILD_HOOK_ID'));
     }
 }
