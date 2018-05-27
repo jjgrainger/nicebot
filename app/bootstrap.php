@@ -19,6 +19,7 @@ $services = [
     App\Providers\TwitterServiceProvider::class,
     App\Providers\OhThatsNiceServiceProvider::class,
     App\Providers\TravisServiceProvider::class,
+    App\Providers\NetlifyServiceProvider::class,
 ];
 
 foreach ($services as $service) {
