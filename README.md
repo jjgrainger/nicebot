@@ -4,7 +4,7 @@
 
 ## About
 
-* Triggers nightly builds on [Travis CI](https://travis-ci.org/jjgrainger/ohthatsnice)
+* Triggers nightly builds on [Netlify](https://netlify.com)
 * Posts new sites and other tweets on [Twitter](https://twitter.com/OhThatsNice_)
 * Deployed to [Heroku](https://heroku.com)
 
