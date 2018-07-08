@@ -1,10 +1,10 @@
-# Nicebot v1.0
+# Nicebot v1.1
 
 > A simple bot that runs automated tasks [Oh Thats Nice](https://ohthatsnice.net)
 
 ## About
 
-* Triggers nightly builds on [Travis CI](https://travis-ci.org/jjgrainger/ohthatsnice)
+* Triggers nightly builds on [Netlify](https://netlify.com)
 * Posts new sites and other tweets on [Twitter](https://twitter.com/OhThatsNice_)
 * Deployed to [Heroku](https://heroku.com)
 
