@@ -1,4 +1,4 @@
-# Nicebot v1.0
+# Nicebot v1.1
 
 > A simple bot that runs automated tasks [Oh Thats Nice](https://ohthatsnice.net)
 
