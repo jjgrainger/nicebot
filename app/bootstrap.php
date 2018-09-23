@@ -20,6 +20,7 @@ $services = [
     App\Providers\OhThatsNiceServiceProvider::class,
     App\Providers\TravisServiceProvider::class,
     App\Providers\NetlifyServiceProvider::class,
+    App\Providers\GithubServiceProvider::class,
 ];
 
 foreach ($services as $service) {

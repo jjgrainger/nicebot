@@ -11,6 +11,9 @@
             "App\\": "app/"
         }
     },
+    "scripts": {
+        "serve": "php -S localhost:8080 -t public/"
+    },
     "require": {
         "vlucas/phpdotenv": "^2.4",
         "guzzlehttp/guzzle": "^6.3",
